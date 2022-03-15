@@ -4,23 +4,26 @@
  - __Introduction to drones__
  - __Code documentaion__
  - __Building a quadcopter from A to Z__
+ - __Useful references__
 
 ## Introduction to drones:
  This is where drone-related concepts are explained:
- - How drones fly
- - Why is each component needed
- - How each componenent works
- - Theoretical concepts
-  - Control theory
-  - Data fusion
-  - Gimbal lock and quaternions
- - Security concerns
+ - __How drones fly__
+ - __Why is each component needed__
+ - __How each componenent works__
+ - __Theoretical concepts__
+  - __Control theory__
+  - __Data fusion__
+  - __Gimbal lock and quaternions__
+ - __Security concerns__
 
 ## Code documentation:
- This is where flight controller and transmitter code is explained.
-Two approaches to how the source code is written\designed are provided:
+ - This is where flight controller and transmitter code is explained.
+Two approaches to how the source code is designed are provided:
   1. __all-in-one-file approach__
   2. __Object-oriented approach__
+
+ - The documentation explains _common code_ (code that reamains the same in these two approaches) only in __all-in-one-file__ approach.
 
 ### all-in-one-file approach
 - In case you are in hurry and you are using the exact same components that this project uses,
@@ -29,11 +32,32 @@ you can just copy the two source code files in src/all\_in\_one\_file and you ar
 - It should be noted that in case you want to use a different module, say a different IMU or a different
 transceiver module, using the object-oriented approach is much more suitable.
 
+- The documentation explains:
+  - __how to setup the source files for your project__
+  - __how to debug (with _fency_ printing methods)__
+  - __overall functions__
+    - __PID function__
+    - __IMU function__
+    - __EEPROM function__
+    - __transmitter function__
+    - __receiver function__
+    - __calibration function__
+    - __security-related functions__
+
 ### object-oriented approach
- This approach is much more versatile and organized than that of the all-in-one-file.
-The documentation explains:
- - functionalities of each class
- - how to replace a module
+- This approach is much more versatile and organized than that of the all-in-one-file.
+- In case you want to replace a componenent, all you have to is:
+  - Create a class that inherits from a
+
+- The documentation explains:
+  - __how to setup the source files for your project__
+  - __how to debug (with _fency_ printing methods)__
+  - __classes__
+    - __UML diagram__
+    - __class functionalities__
+  - __how to replace a module__
+  - __how to add extra functionalities__
+  
 
 ## Building a quadcopter from A to Z:
  -  This section provides a thorough guide on how to build a quadcopter using _common components_.
@@ -41,3 +65,10 @@ The documentation explains:
  - Even if you're using different components, you can still follow this guide as it provides generic
 insights (aren't vendor specific) on how to build and get your quadcopter flying.
 
+## Useful references
+ - This is where you can find plenty of references to helpful resources.
+ - This includes but not limited to:
+   - references to BLDC Motor + propeller data
+   - references to calibration processes
+   - references to guides on LiPo batteries
+   - references to 

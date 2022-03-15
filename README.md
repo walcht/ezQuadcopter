@@ -3,15 +3,15 @@ A well-documented, well-explained and versatile quadcopter flight controller and
 to implement using Arduino\ESP32 microcontrollers.
 
 ## Table of content
- 1. Documentation
- 2. About
- 3. Having a problem?
- 4. Credits
- 5. Feedback
- 6. License
+ 1. [Documentation](#documentation)
+ 2. [About](#about)
+ 3. [Having a problem?](#having-a-problem-?)
+ 4. [Credits](#credits)
+ 5. [Feedback](#feedback)
+ 6. [License](#license)
  
 ## Documentation
-Check official documentation link for all documentation
+Check [official documentation link]() for all documentation
 
 ## About
 This repositry __aims__ to provide a thorough guide to building drones.
