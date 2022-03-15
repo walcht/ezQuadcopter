@@ -16,10 +16,10 @@ Check [official documentation link]() for all documentation
 ## About
 This repositry __aims__ to provide a thorough guide to building drones.
 - In case you're new to this domain:
-  1. the section Introduction to drones in the documentation provides an execelent
+  1. the section [__Introduction to drones__]() provides an execelent
 resource for starters who want to __understand__ core concepts related to drones.
 
-  2. after getting familiar with core concepts, you can check the section Code documentation
+  2. after getting familiar with core concepts, you can check the section [__Code documentation__]()
 for thorough explanation of code implementation for Arduino\ESP32 microcontrollers
 
   3. finally, head to the [__Building a quadcopter from A to Z__]() section for a thorough guide on how to build
