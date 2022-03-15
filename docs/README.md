@@ -1,10 +1,10 @@
 # Check [official documentation link]() for all documentation
 
-## Documentation is split into three sections:
- - __Introduction to drones__
- - __Code documentaion__
- - __Building a quadcopter from A to Z__
- - __Useful references__
+## Documentation is split into four sections:
+ - __[Introduction to drones](#introduction-to-drones)__
+ - __[Code documentaion](#code-documentation)__
+ - __[Building a quadcopter from A to Z](#building-a-quadcopter-from-a-to-z)__
+ - __[Useful references](#useful-references)__
 
 ## Introduction to drones:
  This is where drone-related concepts are explained:
@@ -54,13 +54,13 @@ transceiver module, using the object-oriented approach is much more suitable.
   - __how to debug (with _fency_ printing methods)__
   - __classes__
     - __UML diagram__
-    - __class functionalities__
+    - __classes documentation__
   - __how to replace a module__
   - __how to add extra functionalities__
   
 
 ## Building a quadcopter from A to Z:
- -  This section provides a thorough guide on how to build a quadcopter using _common components_.
+ -  This section provides a thorough guide on how to build a quadcopter using easy-to-find and cheap components.
 
  - Even if you're using different components, you can still follow this guide as it provides generic
 insights (aren't vendor specific) on how to build and get your quadcopter flying.
@@ -71,4 +71,4 @@ insights (aren't vendor specific) on how to build and get your quadcopter flying
    - references to BLDC Motor + propeller data
    - references to calibration processes
    - references to guides on LiPo batteries
-   - references to 
+   - references to other useful articles
