@@ -16,31 +16,32 @@ Check [official documentation link]() for all documentation
 ## About
 This repositry __aims__ to provide a thorough guide to building drones.
 - In case you're new to this domain:
-  1. the section Introduction to drones in the documentation provides an execelent
+  1. the section [__Introduction to drones__]() provides an execelent
 resource for starters who want to __understand__ core concepts related to drones.
 
-  2. after getting familiar with core concepts, you can check the section Code documentation
+  2. after getting familiar with core concepts, you can check the section [__Code documentation__]()
 for thorough explanation of code implementation for Arduino\ESP32 microcontrollers
 
-  3. finally, head to the Building a quadcopter from A to Z section for a thorough guide on building
+  3. finally, head to the [__Building a quadcopter from A to Z__]() section for a thorough guide on how to build
 a drone. (it's not necessary to have the same component used in the guide and source code)
 
-- In case you're just looking for flight controller and\or transmitter source code for Arduino\ESP32:
- - Check Code documention for a thorough source code explanation
+- In case you're just looking for flight controller and\or transmitter source code for Arduino\ESP32
+check [__Code documention__]() for a thorough source code explanation and a guide on how to configure it for your project
 
-- In case you need some guidance on how to build a drone (a quadcopter in particular):
- - Check Building a quadcopter from A to Z section for a thorough guide on how to build a quadcopter
+- In case you need some guidance on how to build a drone (a quadcopter in particular)
+check [Building a quadcopter from A to Z]() section for a thorough guide on how to build a quadcopter
 
 
 ## Having a problem?
-- Check FAQ for frequently asked questions
-- Check Issues (a couple of issues are discussed there)
+- Check [FAQ.md]() for frequently asked questions
+- Check [Issues]() (a couple of issues are discussed there)
 
 - In case you couldn't find anything addressing your problem in this repositry, create an issue!
 
 ## Credits
 
 ## Feedback
-All feature requests, bugs, feedback, etc... are welcome. Create an issue!
+All feature requests, bugs, feedback, etc... are welcome. Just create an issue, and we'll look at it as soon as possible 😊
 
 ## License
+This project uses the MIT License. Check LICENSE.txt for further details.
