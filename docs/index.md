@@ -63,14 +63,16 @@ The goal of control theory is to develop a model that drives a system's paramete
 
 __Terminology__
 		
-- _Set Point_ : is the desired value for the parameter(s) the system controls
-- _Process Variable_: is the measured value for the parameter(s) the system controls
-				
+- _**Set Point**_ : is the desired value for the parameter(s) the system controls
+- _**Process Variable**_: is the measured value for the parameter(s) the system controls
+- _**Error**_: is the difference between a set point and a measured process variable
+			
 In our previous anology:
 - _Set Point_ : speed of the car = 90 km\h
-- _Process Variable_: That is the speed of the car
+- _Process Variable_: That is the speed of the car measured through the speedometer
+- _Error_: That is the difference between 90 km\h and the speed on the speedometer
 
-__What does this have to do with drones?__
+__Okay, but what does this have to do with drones?__
 - Drones aren't stable, even if you apply the exact same throttle to all the motors, chances it will crash immediatly.
 No, this has nothing to do with your piloting skills, it is due to the fact that it is impossible to build a perfect drone
 where the center of gravity is perfectly placed, where the motors rotate at the exact same speed, where the propellers are
@@ -88,6 +90,10 @@ These values are:
  - Yaw
 These are either provided by the user through the remote-controller, or are set to a _default_
 value when the drones receives no input from the user.
+For instance, when the drone is IDLE (no input from the user), we want it to **stabilize** around these values:
+ - 0 for Pitch
+ - 0 for Roll
+ - 0 for Yaw
 
 - For more complex drones, added to the orientation values, one might add:
  - Speed
@@ -95,8 +101,22 @@ value when the drones receives no input from the user.
  - Position
  - etc...
 
-__PID CONTROL__
-		
+- All of these parameters are measured by sensors. Some parameters could be even 'measured' by a camera.
+
+__PID CONTROLLER__
+- **P**roportional–**I**ntegral–**D**erivative controller is a simple feedback loop mechanism that **contineously**
+calculates the *Error* and applies a *correction* based on **proportional**, **integral** and **derivative** terms
+of the error.
+
+__Okay... Maybe an example would be helpful?__
+Proportional correction:
+```
+
+```
+
+Derivative correction:
+
+
 #### Data fusion
 #### Gimbal lock and quaternions
 
