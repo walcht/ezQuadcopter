@@ -154,6 +154,6 @@ ___
 ## Useful References
 
 
-[pid_controller]:  
-[pid_controller_formula]:
-[pedal_angle]
+[pid_controller]: https://github.com/walcht/ezQuadcopter/blob/walcht-documentation/docs/images/pid_controller.png
+[pid_controller_formula]: https://github.com/walcht/ezQuadcopter/blob/walcht-documentation/docs/images/pid_controller_formula.png
+[pedal_angle]:
