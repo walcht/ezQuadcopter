@@ -11,13 +11,13 @@
 #include <Servo.h>      // for controlling the ESCs
 
 //
-// motor_00     motor_01
-//    \           /
-//     \---------/
-//                >
-//     /---------\
-//    /           \
-// motor_02     motor_03
+//  motor_1     motor_2
+//     \           /
+//      \---------/
+//      |          >      This arrow indicates which side of the quadcopter is forward
+//      /---------\
+//     /           \
+//  motor_3     motor_4
 //
 
 #define motor_00    4     // PWM pin to connect with corresponding ESC
@@ -32,8 +32,27 @@
 
 /*-------------------------------------------------------------------------------*/
 
-// uncomment any of these lines for specific behavior
+/*---------------------------- PID-related defines ------------------------------*/
+#define PID_PITCH_P
+#define PID_PITCH_D
+#define PID_PITCH_I
+
+#define PID_ROLL_P
+#define PID_ROLL_D
+#define PID_ROLL_I
+
+#define PID_YAW_P
+#define PID_YAW_D
+#define PID_YAW_I
+/*-------------------------------------------------------------------------------*/
+
+/*------------- Uncomment any of these lines for specific behavior --------------*/
 //#define DEBUG_MODE
+
+/*-------------------------------------------------------------------------------*/
+
+void inline ExecutePID(const int16_t& set_point, int16_t& pid_output);
+
 
 RF24 receiver(CE, CSN);         // check link for class methods: https://nrf24.github.io/RF24/classRF24.html
 
@@ -74,5 +93,17 @@ void loop() {
   }
   
   // code for applying received data to the ESCs
+  
+}
+
+void inline ExecutePID(const int16_t& set_point, int16_t& pid_output) {
+  
+}
+
+void inline UpdateMotorsValues() {
+  
+}
+
+void inline UpdatePitchRollYaw() {
   
 }
