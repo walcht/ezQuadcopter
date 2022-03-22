@@ -33,11 +33,30 @@ ___
 #### Propellers
 #### Brushless Motors
 #### Electronic Speed Controllers (ESCs)
-#### Inertial Measurement Units (IMUs)  
-  ##### Gyroscope Sensor
-  ##### Accelerometer
-  ##### magnetometer
-  #### Radio-frequency Module
+#### Inertial Measurement Units (IMUs)
+- Inertial measurement unit is an electronic sensor that measures the orientation of the object it is attached to.
+The orientation of an object is determined by essentially three values: **Pitch**, **Roll** and **Yaw**.
+Here is a picture that you should never forget (because we'll use these terms a lot!)
+![orientation_terms][orientation_terms]
+we'll discuss IMUs as in their use in flight controllers for drones.
+- IMUs usually use a combination of **accelerometers**, **gyroscopes** and **magnetometers**.
+  - __Accelerometers__ can, to some extent, measure earth's gravitational field at a particular point.
+(This is oversimplified of course, check this [Wikipedia link](https://en.wikipedia.org/wiki/Accelerometer) for further details.)
+  - __Gyroscopes__ measure the rate of rotation along the three axis. Gyroscopes are needed because
+  accelerometer suffer from *drift*; essentially, accelerometers become less accurate overtime.
+  - __Magnetometers__ can, to some extent, measure earth's magnetic field. This is important to determine yaw rotation values.
+
+We'll dive deeper into each component in the sections below.
+
+##### Accelerometer
+![ACCELEROMETER AXIS][accelerometer_axis]
+
+##### Gyroscope Sensor
+
+##### magnetometer
+
+
+#### Radio-frequency Module
 #### Flight Controllers
 #### LiPo Batteries
 ___
@@ -85,21 +104,22 @@ That is why we need __control theory__ to __guide__ the drone into the _desired 
 __What are those _desired_ values?__
 - For a simple drone, those are the _orientation values_ that the drone must target.
 These values are:
- - Pitch
- - Roll
- - Yaw
-These are either provided by the user through the remote-controller, or are set to a _default_
+  - Pitch
+  - Roll
+  - Yaw
+ 
+- These are either provided by the user through the remote-controller, or are set to a _default_
 value when the drones receives no input from the user.
 For instance, when the drone is IDLE (no input from the user), we want it to **stabilize** around these values:
- - 0 for Pitch
- - 0 for Roll
- - 0 for Yaw
+  - 0 for Pitch
+  - 0 for Roll
+  - 0 for Yaw
 
 - For more complex drones, added to the orientation values, one might add:
- - Speed
- - Altitude
- - Position
- - etc...
+  - Speed
+  - Altitude
+  - Position
+  - etc...
 
 - All of these parameters are measured by sensors. Some parameters could be even 'measured' by a camera.
 
@@ -155,6 +175,9 @@ ___
 ## Useful References
 
 
+[accelerometer_axis]: https://github.com/walcht/ezQuadcopter/blob/walcht-documentation/docs/images/accelerometer_axis.png
 [pid_controller]: https://github.com/walcht/ezQuadcopter/blob/walcht-documentation/docs/images/pid_controller.png
 [pid_controller_formula]: https://github.com/walcht/ezQuadcopter/blob/walcht-documentation/docs/images/pid_controller_formula.png
 [pedal_angle]: https://github.com/walcht/ezQuadcopter/blob/walcht-documentation/docs/images/pedal_angle.png
+[orientation_terms]: https://github.com/walcht/ezQuadcopter/blob/walcht-documentation/docs/images/orientation_terms.png
+
