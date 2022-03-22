@@ -108,14 +108,40 @@ __PID CONTROLLER__
 calculates the *Error* and applies a *correction* based on **proportional**, **integral** and **derivative** terms
 of the error.
 
+![PID CONTROLLER DIAGRAM][pid_controller]
+
+- It should be noted that **PI** and **PD** are also widely used controllers.
+
+![PID CONTROLLER FORMULA][pid_controller_formula]
+
 __Okay... Maybe an example would be helpful?__
-Proportional correction:
-```
+__Proportional correction__: Applies an output(in other terms correction) **proportional** to the error
 
 ```
+Let's go back to the car example, each time you measure the error, that is the difference between the set point (90 km\h) and 
+the speed measured from the speedometer, you apply a proportional force to the throttle pedal. For instance, you notice that 
+the error is 20 km\h thus you push somewhat hardly on the pedal. You notice the error is 4 km\h thus you slightly push the pedal.
+```
 
-Derivative correction:
+__Derivative correction__: Applies an output proportional to the **rate of change** of the error
+The derivative term is used to avoid **overshooting** the set point.
+```
+In the same example, you realize the error is 30 km\h, that is a significant error thus you apply a proportional correction by
+flooring the peddal! After some time, the error is 25 km\h but you realize that you are rapidly approaching 90 km\h and that
+there is a risk that you will surpass that value (overshoot) that you decide to reduce the force by which you step on the pedal.
+```
 
+__Integral correction__: Applies an output proportional to the **accumulated** error
+You can think of the intergral term as an offset that compensates for a steady-state error that is present in your system.
+![PEDAL ANGLE][pedal_angle]
+```
+Up to this point, we assumed that the output of the PID controller is the change in force applied to the pedal thus when we reach
+the desired speed,the output would be zero (that is no change in force applied to the peddal). But what if we want the output
+to be an angle (see picture). In this case, even if you've reached the desired speed, the output of the PID shouldn't be
+zero! Without the integral part, the output would be zero, that is a 0 angle which is wrong.
+```
+- Now, hopefully, you've got an indea about control theory and PID controllers in particular.
+You can check
 
 #### Data fusion
 #### Gimbal lock and quaternions
@@ -126,3 +152,8 @@ ___
 ## Code Documentation
 ## Building a Quadcopter from A to Z
 ## Useful References
+
+
+[pid_controller]:  
+[pid_controller_formula]:
+[pedal_angle]
