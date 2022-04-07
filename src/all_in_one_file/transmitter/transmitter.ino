@@ -3,8 +3,8 @@
 #include <RF24.h>       // RC transceiver module libraries
 #include <nRF24L01.h>   
 
-#define CE    10        // necessary for RC tranceiver
-#define CSN   11      
+#define CE    5        // necessary for RC tranceiver
+#define CSN   4      
 
 
 #define VX0 A0  // left analog input
@@ -13,7 +13,7 @@
 #define VY1 A3
 
 // uncomment any of these lines for specific behavior
-//#define DEBUG_MODE
+#define DEBUG_MODE
 
 RF24 transmitter(CE, CSN);      // check link for class methods: https://nrf24.github.io/RF24/classRF24.html
 
@@ -32,10 +32,10 @@ void setup() {
 void loop() {
 
   uint16_t values_to_send[4];           // [VX0, VY0, VX1, VY1]
-  values_to_send[0] = analogRead(VX0);
-  values_to_send[1] = analogRead(VY0);
-  values_to_send[2] = analogRead(VX1);
-  values_to_send[3] = analogRead(VY1);
+  values_to_send[0] = map(analogRead(VX0), 0, 1023, 0, 180);
+  values_to_send[1] = map(analogRead(VY0), 0, 1023, 0, 180);
+  values_to_send[2] = map(analogRead(VX1), 0, 1023, 0, 180);
+  values_to_send[3] = map(analogRead(VY1), 0, 1023, 0, 180);
   #ifdef DEBUG_MODE
     Serial.print(values_to_send[0]);
     Serial.print("\t");
@@ -53,7 +53,7 @@ void loop() {
   if (!transmitter.write(values_to_send, sizeof(uint16_t)*4))
   {
     #ifdef DEBUG_MODE
-      Serial.print("packet lost!");
+      //Serial.print("packet lost!");
     #endif
     // some code to inform the user of the transmitter of packet loss
   }
