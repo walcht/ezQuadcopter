@@ -215,7 +215,7 @@ int16_t inline ExecuteRollPID(const int16_t& roll_set_point, const int16_t& meas
   float proportional;
   float derivative;
   
-  error = roll_set_point - measured_roll;
+  error = static_cast<float>roll_set_point - measured_roll;
   
   proportional = PID_ROLL_P * error;
   derivative = PID_ROLL_D * (error - (previous_error));
@@ -223,7 +223,7 @@ int16_t inline ExecuteRollPID(const int16_t& roll_set_point, const int16_t& meas
   
   previous_error = error;
   
-  return proportional + integral + derivative;
+  return static_cast<int16_t>(proportional + integral + derivative);
 }
 
 int16_t inline ExecuteYawPID(const float& yaw_set_point, const float& measured_yaw) {
@@ -234,7 +234,7 @@ int16_t inline ExecuteYawPID(const float& yaw_set_point, const float& measured_y
   float proportional;
   float derivative;
   
-  error = yaw_set_point - measured_yaw;
+  error = static_cast<int16_t>(yaw_set_point - measured_yaw);
   
   proportional = PID_YAW_P * error;
   derivative = PID_YAW_D * (error - (previous_error));
@@ -243,7 +243,7 @@ int16_t inline ExecuteYawPID(const float& yaw_set_point, const float& measured_y
     
   previous_error = error;
 
-  return proportional + integral + derivative;
+  return static_cast<int16_t>(proportional + integral + derivative);
 }
 
 void inline UpdateMotorsValues( const int16_t throttle, const int16_t pitch_pid_output,
