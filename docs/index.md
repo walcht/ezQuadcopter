@@ -175,9 +175,9 @@ ___
 ## Useful References
 
 
-[accelerometer_axis]: https://github.com/walcht/ezQuadcopter/blob/master/docs/images/accelerometer_axis.png
-[pid_controller]: https://github.com/walcht/ezQuadcopter/blob/master/docs/images/pid_controller.png
-[pid_controller_formula]: https://github.com/walcht/ezQuadcopter/blob/master/docs/images/pid_controller_formula.png
-[pedal_angle]: https://github.com/walcht/ezQuadcopter/blob/master/docs/images/pedal_angle.png
-[orientation_terms]: https://github.com/walcht/ezQuadcopter/blob/master/docs/images/orientation_terms.png
+[accelerometer_axis]: images/accelerometer_axis.png
+[pid_controller]: images/pid_controller.png
+[pid_controller_formula]: images/pid_controller_formula.png
+[pedal_angle]: images/pedal_angle.png
+[orientation_terms]: images/orientation_terms.png
 
