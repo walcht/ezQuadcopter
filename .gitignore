@@ -2,3 +2,5 @@ include/*
 libraries/*
 image/*
 pdfs/*
+.pio
+.vscode
