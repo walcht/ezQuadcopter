@@ -1,4 +1,8 @@
 # ezQuadcopter
+
+> [!WARNING]
+> This project is no longer maintained (it is a project that I have done in University a very long time ago and I am not willing to maintain it).
+
 A well-documented, well-explained and versatile quadcopter flight controller and transmitter code
 to implement using Arduino\ESP32 microcontrollers.
 
